@@ -16,10 +16,10 @@ public class Asisten extends Orang {
     private int nTubes = 0;
     private int maxTubes;
 
-    public Asisten(String nama, String alamat, long noHP, String jenisKelamin) {
+    public Asisten(String nama, String alamat, long noHP, String jenisKelamin, String id_asisten) {
         super(nama, alamat, noHP, jenisKelamin);
         tugasbesar = new TugasBesar[12];
-
+        this.id_asisten = id_asisten;
     }
 
     public Asisten(String nama, String alamat, long noHP, String jenisKelamin, int maxTubes) {
@@ -79,4 +79,22 @@ public class Asisten extends Orang {
     public int getnTubes() {
         return nTubes;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public long getNoHP() {
+        return noHP;
+    }
+
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
+    
+    
 }

@@ -7,7 +7,7 @@ package TubesPBO;
 
 /**
  *
- * @author Ndas-PC
+ * @author Penguin
  */
 public class Mahasiswa extends Orang {
     private String nim;

@@ -55,7 +55,7 @@ public class Mahasiswa extends Orang {
     public void addDokumentasi(TugasBesar tb,String judul, String isi){
         tb.createDokumentasi(judul,isi);
     }
-    public void RemoveDokumentasi(TugasBesar tb,int idx){
-        tb.RemoveDokumentasi(idx);
+    public void removeDokumentasi(TugasBesar tb,int idx){
+        tb.removeDokumentasi(idx);
     }
 }

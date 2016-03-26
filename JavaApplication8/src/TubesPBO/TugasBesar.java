@@ -67,7 +67,7 @@ public class TugasBesar {
         return a;
     }
 
-    public void RemoveMember(int n) {
+    public void removeMember(int n) {
         if ((n < member.length) && (n >= 0)) {
             System.out.println(member[n].getName()+ " telah dihapus dari tubes "+this.getJudul());
             member[n] = null;
@@ -89,7 +89,7 @@ public class TugasBesar {
         }
     }
 
-    public void RemoveDokumentasi(int n) {
+    public void removeDokumentasi(int n) {
         if((n<dokumentasi.length) && (n>=0)){
             System.out.println("Dokumentasi ke-"+(n)+" telah dihapus.");
             dokumentasi[n]=null;

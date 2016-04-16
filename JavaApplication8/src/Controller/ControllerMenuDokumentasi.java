@@ -23,7 +23,7 @@ public class ControllerMenuDokumentasi implements ActionListener {
     Dokumentasi d;
 
     public ControllerMenuDokumentasi(Aplikasi model, MenuDokumentasi view, Dokumentasi d) {
-        model = new Aplikasi();
+        this.model = model;
         view = new MenuDokumentasi();
         
         view.setVisible(true);
@@ -38,11 +38,11 @@ public class ControllerMenuDokumentasi implements ActionListener {
         Object a = ae.getSource();
         if(a.equals(view.getBtnaddDokumen())) {
             view.dispose();
-            new ControllerInputDokumentasi();
+            new ControllerInputDokumentasi(model);
         }
         else if(a.equals(view.getBtnHalamanUtama())) {
             view.dispose();
-            new ControllerHome();
+            new ControllerHome(model);
         }
         else if(a.equals(view.getBtnViewDokumen())) {
             view.dispose();
@@ -50,7 +50,7 @@ public class ControllerMenuDokumentasi implements ActionListener {
         }
         else if(a.equals(view.getBtnHapusDokumen())) {
             view.dispose();
-            new ControllerHapusDokumentasi();
+            new ControllerHapusDokumentasi(model);
         }
     }
     

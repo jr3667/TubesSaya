@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package Controller;
-
+import TubesPBO.Aplikasi;
 /**
  *
  * @author acer
  */
 public class ControllerInputDokumentasi {
+    Aplikasi model;
+    public ControllerInputDokumentasi(Aplikasi model){
+        this.model = model;
+    }
     
 }

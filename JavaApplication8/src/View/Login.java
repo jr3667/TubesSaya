@@ -5,6 +5,10 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Penguin
@@ -108,6 +112,18 @@ public class Login extends javax.swing.JPanel {
                     .addGap(0, 137, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    public JTextField getJIdUser() {
+        return JIdUser;
+    }
+
+    public JPasswordField getJPassword() {
+        return JPassword;
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
 
     private void JIdUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JIdUserActionPerformed
         // TODO add your handling code here:

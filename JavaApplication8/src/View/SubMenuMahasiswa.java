@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Penguin
@@ -27,27 +29,27 @@ public class SubMenuMahasiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        TombolLogout = new javax.swing.JButton();
+        TmblTambahTubes = new javax.swing.JButton();
+        TmblTambahDokTubes = new javax.swing.JButton();
+        TmblHapusDokTubes = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        TmblMenuUtama = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton4.setText("Log out");
+        TombolLogout.setText("Log out");
 
-        jButton1.setText("Tambah Ke tugas besar");
+        TmblTambahTubes.setText("Tambah Ke tugas besar");
 
-        jButton2.setText("Tambah Dokumentasi ke tuas besar");
-        jButton2.setToolTipText("");
+        TmblTambahDokTubes.setText("Tambah Dokumentasi ke tuas besar");
+        TmblTambahDokTubes.setToolTipText("");
 
-        jButton3.setText("Hapus dokumentasi tugas besar");
+        TmblHapusDokTubes.setText("Hapus dokumentasi tugas besar");
 
         jLabel1.setText("Sub Menu Mahasiswa");
 
-        jButton5.setText("Kembali Ke Menu Utama");
+        TmblMenuUtama.setText("Kembali Ke Menu Utama");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,32 +63,32 @@ public class SubMenuMahasiswa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(TmblTambahTubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TmblHapusDokTubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TmblTambahDokTubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(78, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4))
+                    .addComponent(TmblMenuUtama)
+                    .addComponent(TombolLogout))
                 .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jButton4)
+                .addComponent(TombolLogout)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(TmblTambahTubes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(TmblTambahDokTubes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(TmblHapusDokTubes)
                 .addGap(44, 44, 44)
-                .addComponent(jButton5)
+                .addComponent(TmblMenuUtama)
                 .addContainerGap(62, Short.MAX_VALUE))
         );
 
@@ -96,44 +98,33 @@ public class SubMenuMahasiswa extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SubMenuMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SubMenuMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SubMenuMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SubMenuMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SubMenuMahasiswa().setVisible(true);
-            }
-        });
+    public JButton getTmblHapusDokTubes() {
+        return TmblHapusDokTubes;
     }
 
+    public JButton getTmblMenuUtama() {
+        return TmblMenuUtama;
+    }
+
+    public JButton getTmblTambahDokTubes() {
+        return TmblTambahDokTubes;
+    }
+
+    public JButton getTmblTambahTubes() {
+        return TmblTambahTubes;
+    }
+
+    public JButton getTombolLogout() {
+        return TombolLogout;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton TmblHapusDokTubes;
+    private javax.swing.JButton TmblMenuUtama;
+    private javax.swing.JButton TmblTambahDokTubes;
+    private javax.swing.JButton TmblTambahTubes;
+    private javax.swing.JButton TombolLogout;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

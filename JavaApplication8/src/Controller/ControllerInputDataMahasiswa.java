@@ -46,11 +46,6 @@ public class ControllerInputDataMahasiswa implements ActionListener, FocusListen
             String jkelamin = view.getJenisKelamin();
             String nohp = view.getNoHp();
             String nim = view.getNim();
-            if(m==null) {
-                boolean nimMhs = model.addMahasiswa(nama, alamat, nohp, jkelamin, nim);
-                view.showMessage(view, "NIM Anda : "+ nimMhs);
-                view
-            }
         }
     }
 

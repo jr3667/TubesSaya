@@ -33,7 +33,7 @@ public class MenuMahasiswa extends javax.swing.JFrame {
         BtnaddMhs = new javax.swing.JButton();
         BtnCariMhs = new javax.swing.JButton();
         BtnHapusMhs = new javax.swing.JButton();
-        BtnLogout = new javax.swing.JButton();
+        BtnHalamanUtama = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,17 +41,12 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         BtnaddMhs.setText("Tambah Mahasiswa");
 
-        BtnCariMhs.setText("Cari Mahasiswa");
+        BtnCariMhs.setText("Login Mahasiswa");
         BtnCariMhs.setToolTipText("");
-        BtnCariMhs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnCariMhsActionPerformed(evt);
-            }
-        });
 
         BtnHapusMhs.setText("Hapus Mahasiswa");
 
-        BtnLogout.setText("Log out");
+        BtnHalamanUtama.setText("Ke menu halaman utama");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,15 +66,13 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addContainerGap(156, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BtnLogout)
+                .addComponent(BtnHalamanUtama)
                 .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(BtnLogout)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(BtnaddMhs)
@@ -87,42 +80,43 @@ public class MenuMahasiswa extends javax.swing.JFrame {
                 .addComponent(BtnCariMhs)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnHapusMhs)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(BtnHalamanUtama)
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnCariMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCariMhsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnCariMhsActionPerformed
+       
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnCariMhs;
+    private javax.swing.JButton BtnHalamanUtama;
+    private javax.swing.JButton BtnHapusMhs;
+    private javax.swing.JButton BtnaddMhs;
+    private javax.swing.JLabel jLabel1;
+    // End of variables declaration//GEN-END:variables
 
-    /**
-     * @param args the command line arguments
-     */
-    public JButton getBtnCariMhs() {
-        return BtnCariMhs;
-    }
-
-    public JButton getBtnHapusMhs() {
-        return BtnHapusMhs;
-    }
-
-    public JButton getBtnLogout() {
-        return BtnLogout;
-    }
+        public JButton getBtnHalamanUtama() {
+           return BtnHalamanUtama;
+       }
+       
+       public JButton getaddMhs() {
+           return BtnaddMhs;
+       }
+       
+       public JButton getBtnCariMhs() {
+           return BtnCariMhs;
+       }
+       
+       public JButton getBtnHapusMhs() {
+           return BtnHapusMhs;
+       }
 
     public JButton getBtnaddMhs() {
         return BtnaddMhs;
     }
-
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnCariMhs;
-    private javax.swing.JButton BtnHapusMhs;
-    private javax.swing.JButton BtnLogout;
-    private javax.swing.JButton BtnaddMhs;
-    private javax.swing.JLabel jLabel1;
-    // End of variables declaration//GEN-END:variables
+       
+       
+    
 }

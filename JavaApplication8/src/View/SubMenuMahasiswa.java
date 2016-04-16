@@ -29,27 +29,24 @@ public class SubMenuMahasiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TombolLogout = new javax.swing.JButton();
-        TmblTambahTubes = new javax.swing.JButton();
-        TmblTambahDokTubes = new javax.swing.JButton();
-        TmblHapusDokTubes = new javax.swing.JButton();
+        BtnTambahKeTugasBesar = new javax.swing.JButton();
+        BtnTambahDokumentasiKeTugasBesar = new javax.swing.JButton();
+        BtnHapusDokumentasiTugasBesar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        TmblMenuUtama = new javax.swing.JButton();
+        BtnHalamanUtama = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        TombolLogout.setText("Log out");
+        BtnTambahKeTugasBesar.setText("Tambah Ke tugas besar");
 
-        TmblTambahTubes.setText("Tambah Ke tugas besar");
+        BtnTambahDokumentasiKeTugasBesar.setText("Tambah Dokumentasi ke tugas besar");
+        BtnTambahDokumentasiKeTugasBesar.setToolTipText("");
 
-        TmblTambahDokTubes.setText("Tambah Dokumentasi ke tuas besar");
-        TmblTambahDokTubes.setToolTipText("");
-
-        TmblHapusDokTubes.setText("Hapus dokumentasi tugas besar");
+        BtnHapusDokumentasiTugasBesar.setText("Hapus dokumentasi tugas besar");
 
         jLabel1.setText("Sub Menu Mahasiswa");
 
-        TmblMenuUtama.setText("Kembali Ke Menu Utama");
+        BtnHalamanUtama.setText("Kembali Ke Menu Utama");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,68 +60,57 @@ public class SubMenuMahasiswa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TmblTambahTubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TmblHapusDokTubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TmblTambahDokTubes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(78, Short.MAX_VALUE))
+                            .addComponent(BtnTambahKeTugasBesar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnHapusDokumentasiTugasBesar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnTambahDokumentasiKeTugasBesar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(72, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(TmblMenuUtama)
-                    .addComponent(TombolLogout))
+                .addComponent(BtnHalamanUtama)
                 .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(TombolLogout)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(TmblTambahTubes)
+                .addComponent(BtnTambahKeTugasBesar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TmblTambahDokTubes)
+                .addComponent(BtnTambahDokumentasiKeTugasBesar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TmblHapusDokTubes)
+                .addComponent(BtnHapusDokumentasiTugasBesar)
                 .addGap(44, 44, 44)
-                .addComponent(TmblMenuUtama)
+                .addComponent(BtnHalamanUtama)
                 .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public JButton getTmblHapusDokTubes() {
-        return TmblHapusDokTubes;
-    }
 
-    public JButton getTmblMenuUtama() {
-        return TmblMenuUtama;
-    }
-
-    public JButton getTmblTambahDokTubes() {
-        return TmblTambahDokTubes;
-    }
-
-    public JButton getTmblTambahTubes() {
-        return TmblTambahTubes;
-    }
-
-    public JButton getTombolLogout() {
-        return TombolLogout;
-    }
-
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton TmblHapusDokTubes;
-    private javax.swing.JButton TmblMenuUtama;
-    private javax.swing.JButton TmblTambahDokTubes;
-    private javax.swing.JButton TmblTambahTubes;
-    private javax.swing.JButton TombolLogout;
+    private javax.swing.JButton BtnHalamanUtama;
+    private javax.swing.JButton BtnHapusDokumentasiTugasBesar;
+    private javax.swing.JButton BtnTambahDokumentasiKeTugasBesar;
+    private javax.swing.JButton BtnTambahKeTugasBesar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+    public JButton getBtnHalamanUtama() {
+        return BtnHalamanUtama;
+    }
+
+    public JButton getBtnTambahDokumentasiKeTugasBesar() {
+        return BtnTambahDokumentasiKeTugasBesar;
+    }
+
+    public JButton getBtnHapusDokumentasiTugasBesar() {
+        return BtnHapusDokumentasiTugasBesar;
+    }
+
+    public JButton getBtnTambahKeTugasBesar() {
+        return BtnTambahKeTugasBesar;
+    }
+
+
 }

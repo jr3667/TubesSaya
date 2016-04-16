@@ -23,26 +23,26 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="BtnaddMhs" alignment="0" max="32767" attributes="0"/>
-                          <Component id="BtnHapusMhs" alignment="0" max="32767" attributes="0"/>
-                          <Component id="BtnCariMhs" alignment="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="BtnAddAsisten" max="32767" attributes="0"/>
+                          <Component id="BtnCariAsisten" alignment="0" max="32767" attributes="0"/>
+                          <Component id="BtnHapusAsisten" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="156" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="BtnHalamanUtama" min="-2" max="-2" attributes="0"/>
+              <Component id="BtnBackMenuAs" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -50,17 +50,17 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="BtnAddAsisten" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="BtnaddMhs" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="BtnCariMhs" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="BtnHapusMhs" min="-2" max="-2" attributes="0"/>
+              <Component id="BtnCariAsisten" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="BtnHalamanUtama" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="88" max="32767" attributes="0"/>
+              <Component id="BtnHapusAsisten" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <Component id="BtnBackMenuAs" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,28 +68,27 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Menu Mahasiswa"/>
+        <Property name="text" type="java.lang.String" value="Sub Menu Asisten"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnaddMhs">
+    <Component class="javax.swing.JButton" name="BtnAddAsisten">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tambah Mahasiswa"/>
+        <Property name="text" type="java.lang.String" value="Tambah Data Asisten"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnCariMhs">
+    <Component class="javax.swing.JButton" name="BtnCariAsisten">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Login Mahasiswa"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="text" type="java.lang.String" value="Cari Data Asisten"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnHapusMhs">
+    <Component class="javax.swing.JButton" name="BtnHapusAsisten">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hapus Mahasiswa"/>
+        <Property name="text" type="java.lang.String" value="Hapus Data Asisten"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="BtnHalamanUtama">
+    <Component class="javax.swing.JButton" name="BtnBackMenuAs">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ke menu halaman utama"/>
+        <Property name="text" type="java.lang.String" value="Kembali ke Menu Asisten"/>
       </Properties>
     </Component>
   </SubComponents>

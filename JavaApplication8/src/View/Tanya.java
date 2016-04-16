@@ -5,8 +5,6 @@
  */
 package View;
 
-import javax.swing.JButton;
-
 /**
  *
  * @author Penguin
@@ -30,16 +28,16 @@ public class Tanya extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        TombolYa = new javax.swing.JButton();
-        TombolTidak = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Kembali ke menu utama");
 
-        TombolYa.setText("Ya");
+        jButton1.setText("Ya");
 
-        TombolTidak.setText("Tidak");
+        jButton2.setText("Tidak");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,9 +47,9 @@ public class Tanya extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(125, 125, 125)
-                        .addComponent(TombolYa)
+                        .addComponent(jButton1)
                         .addGap(28, 28, 28)
-                        .addComponent(TombolTidak))
+                        .addComponent(jButton2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(133, 133, 133)
                         .addComponent(jLabel1)))
@@ -64,8 +62,8 @@ public class Tanya extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TombolYa)
-                    .addComponent(TombolTidak))
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
 
@@ -75,19 +73,41 @@ public class Tanya extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public JButton getTombolTidak() {
-        return TombolTidak;
-    }
-
-    public JButton getTombolYa() {
-        return TombolYa;
-    }
-
- 
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Tanya.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Tanya.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Tanya.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Tanya.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Tanya().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton TombolTidak;
-    private javax.swing.JButton TombolYa;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

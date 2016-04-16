@@ -10,13 +10,18 @@ package TubesPBO;
  * @author Penguin
  */
 public class Mahasiswa extends Orang {
+
     private String nim;
-        
-    public TugasBesar getTugasBesar(Asisten a){
+
+    public Mahasiswa() {
+        super();
+    }
+
+    public TugasBesar getTugasBesar(Asisten a) {
         TugasBesar tb = null; // batasan masalahnya satu mahasiswa hanya bisa mempunyai satu tubes
         for (int i = 0; i < a.getnTubes(); i++) {
             for (int j = 0; j < a.getTugasBesar(i).getnMember(); j++) {
-                if(a.getTugasBesar(i).getMember(j).equals(this)){
+                if (a.getTugasBesar(i).getMember(j).equals(this)) {
                     tb = a.getTugasBesar(i);
                 }
             }
@@ -24,38 +29,61 @@ public class Mahasiswa extends Orang {
         return tb;
     }
 
-	public Mahasiswa(String name, String alamat, long noHP, String jenisKelamin,String nim) {
-		super(name,alamat,noHP,jenisKelamin);
-        this.nim=nim;
-	}
-        public String getName(){
-            return name;
-        }
-        
-        public String getAlamat(){
-            return alamat;
-        }
-        
-        public long getNoHP(){
-            return noHP;
-        }
-        
-        public String getJenisKelamin(){
-            return jenisKelamin;
-        }
-        
+    public Mahasiswa(String name, String alamat, long noHP, String jenisKelamin, String nim) {
+        super(name, alamat, noHP, jenisKelamin);
+        this.nim = nim;
+    }
 
-	public String getNIM(){
-		return nim;
-	}
-        
-    public void addTugasBesar(TugasBesar tb){
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public void setNoHP(long noHP) {
+        this.noHP = noHP;
+    }
+
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
+    }
+
+    
+    public String getName() {
+        return name;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public long getNoHP() {
+        return noHP;
+    }
+
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
+
+    public String getNIM() {
+        return nim;
+    }
+
+    public void addTugasBesar(TugasBesar tb) {
         tb.addMember(this);
     }
-    public void addDokumentasi(TugasBesar tb,String judul, String isi){
-        tb.createDokumentasi(judul,isi);
+
+    public void addDokumentasi(TugasBesar tb, String judul, String isi) {
+        tb.createDokumentasi(judul, isi);
     }
-    public void removeDokumentasi(TugasBesar tb,int idx){
+
+    public void removeDokumentasi(TugasBesar tb, int idx) {
         tb.removeDokumentasi(idx);
     }
 }

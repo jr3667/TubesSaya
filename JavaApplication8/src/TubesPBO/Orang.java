@@ -10,16 +10,21 @@ package TubesPBO;
  * @author Ndas-PC
  */
 public abstract class Orang {
+
     protected String name;
-	protected String alamat;
-	protected long noHP;
-	protected String jenisKelamin;
-	
-    public Orang(String name, String alamat, long noHP, String jenisKelamin   ){
-		this.name = name;
-		this.alamat = alamat;
-		this.noHP = noHP;
-		this.jenisKelamin = jenisKelamin;
-	}
+    protected String alamat;
+    protected long noHP;
+    protected String jenisKelamin;
+
+    public Orang() {
+
+    }
+
+    public Orang(String name, String alamat, long noHP, String jenisKelamin) {
+        this.name = name;
+        this.alamat = alamat;
+        this.noHP = noHP;
+        this.jenisKelamin = jenisKelamin;
+    }
 
 }

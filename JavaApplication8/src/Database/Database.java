@@ -12,7 +12,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,18 +37,16 @@ public class Database {
         }
     }
 
-    public void query(String SQLString) {
+    public void manipulate(String SQLString) {
         try {
-            st = conn.createStatement();
             st.executeUpdate(SQLString);
         } catch (Exception e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
     public ResultSet getData(String SQLString) {
         try {
-            st = conn.createStatement();
             rs = st.executeQuery(SQLString);
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,15 +56,15 @@ public class Database {
 
     public void saveMahasiswa(Mahasiswa m) {
         String query = "insert into mahasiswa values ('" + m.getNIM() + "','" + m.getName() + "','" + m.getAlamat() + "'," + m.getNoHP() + ",'" + m.getJenisKelamin() + "')";
-        query(query);
+        manipulate(query);
     }
 
     public Mahasiswa getMahasiswa(String nim) {
-        String query = "select * from mahasiswa where nim='" + nim + "'";
-        ResultSet rs = getData(query);
-        Mahasiswa m = new Mahasiswa();
+        Mahasiswa m = null;
 
         try {
+            String query = "select * from mahasiswa where nim='" + nim + "'";
+            ResultSet rs = getData(query);
             while (rs.next()) {
                 String nim_mhs = rs.getString("nim");
                 m.setNim(nim_mhs);
@@ -75,22 +72,21 @@ public class Database {
                 m.setName(name);
                 String alamat = rs.getString("alamat_mhs");
                 m.setAlamat(alamat);
-                long noHP = rs.getLong("noHP_mhs");
+                String noHP = rs.getString("noHP_mhs");
                 m.setNoHP(noHP);
                 String jk = rs.getString("jk_mhs");
                 m.setJenisKelamin(jk);
             }
         } catch (Exception e) {
-            System.out.println("Error!!");
+            e.printStackTrace();
         }
         return m;
     }
 
     public void deleteMahasiswa(String nim) {
-        String query = "Delete from mahasiswa where nim = '" + nim + "'";
-        ResultSet rs = getData(query);
+        String query = "Delete * from mahasiswa where nim = '" + nim + "'";
         if (getMahasiswa(nim) != null) {
-            query(query);
+            manipulate(query);
             System.out.println("Data Mahasiswa dengan nim " + nim + " berhasil dihapus.");
         } else {
             System.out.println("Data tidak ditemukan.");
@@ -99,16 +95,17 @@ public class Database {
     }
 
     public void saveAsisten(Asisten a) {
-        String query = "insert into asisten values ('" + a.getId_asisten() + "','" + a.getName() + "','" + a.getAlamat() + "'," + a.getNoHP() + ",'" + a.getJenisKelamin() + "')";
-        query(query);
+        String query = "insert into asisten values ('" + a.getId_asisten() + "','" + a.getName() + "','" + a.getAlamat() + "','" + a.getNoHP() + "','" + a.getJenisKelamin() + "')";
+        manipulate(query);
     }
 
     public Asisten getAsisten(String id) {
-        String query = "select * from asisten where id_asisten='" + id + "'";
-        ResultSet rs = getData(query);
-        Asisten a = new Asisten();
+
+        Asisten a = null;
 
         try {
+            String query = "select * from asisten where id_asisten='" + id + "'";
+            ResultSet rs = getData(query);
             while (rs.next()) {
                 String id_asisten = rs.getString("id_asisten");
                 a.setId_asisten(id_asisten);
@@ -116,22 +113,22 @@ public class Database {
                 a.setName(nama);
                 String alamat = rs.getString("alamat_asisten");
                 a.setAlamat(alamat);
-                long noHP = rs.getLong("noHP_asisten");
+                String noHP = rs.getString("noHP_asisten");
                 a.setNoHP(noHP);
                 String jk = rs.getString("jk_asisten");
                 a.setJenisKelamin(jk);
             }
         } catch (Exception e) {
-            System.out.println("Error!!");
+            e.printStackTrace();
         }
         return a;
     }
 
     public void deleteAsisten(String id) {
-        String query = "Delete from asisten where id_asisten = '" + id+ "'";
+        String query = "Delete * from asisten where id_asisten = '" + id + "'";
         ResultSet rs = getData(query);
         if (getAsisten(id) != null) {
-            query(query);
+            manipulate(query);
             System.out.println("Data Asisten dengan nim " + id + " berhasil dihapus.");
         } else {
             System.out.println("Data tidak ditemukan.");

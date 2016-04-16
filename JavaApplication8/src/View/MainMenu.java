@@ -28,19 +28,19 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        BtnAsisten = new javax.swing.JButton();
+        BtnMahasiswa = new javax.swing.JButton();
+        BtnEdit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Menu Utama");
 
-        jButton1.setText("Asisten");
+        BtnAsisten.setText("Asisten");
 
-        jButton2.setText("Mahasiswa");
+        BtnMahasiswa.setText("Mahasiswa");
 
-        jButton3.setText("Edit");
+        BtnEdit.setText("Edit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,28 +49,28 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
+                        .addGap(164, 164, 164)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addComponent(jButton1)
-                            .addComponent(jButton3))))
-                .addContainerGap(151, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(BtnAsisten)
+                        .addGap(40, 40, 40)
+                        .addComponent(BtnMahasiswa)
+                        .addGap(40, 40, 40)
+                        .addComponent(BtnEdit)))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel1)
-                .addGap(26, 26, 26)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnAsisten)
+                    .addComponent(BtnMahasiswa)
+                    .addComponent(BtnEdit))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,10 +111,12 @@ public class MainMenu extends javax.swing.JFrame {
         });
     }
 
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton BtnAsisten;
+    private javax.swing.JButton BtnEdit;
+    private javax.swing.JButton BtnMahasiswa;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -8,6 +8,7 @@ package TubesPBO;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Database.Database;
+
 /**
  *
  * @author acer, HP1000, Penguin
@@ -28,62 +29,47 @@ public class Aplikasi {
         dafAsisten = new ArrayList<Asisten>();
         dafMhs = new ArrayList<Mahasiswa>();
     }
-    
-    
-    
-    public boolean addAsisten(String nama, String alamat, long noHP, String jenisKelamin, String id_asisten) {
-        if (dafAsisten.add(new Asisten(nama, alamat, noHP, jenisKelamin, id_asisten))) {
-            return true;
-        } else {
-            return false;
-        }
+
+    public void addAsisten(String nama, String alamat, String noHP, String jenisKelamin, String id_asisten) {
+        Asisten a = new Asisten(nama, alamat, noHP, jenisKelamin, id_asisten);
+        dafAsisten.add(a);
+        db.saveAsisten(a);
     }
 
-    public boolean addMahasiswa(String name, String alamat, long noHP, String jenisKelamin, String nim) {
-        if (dafMhs.add(new Mahasiswa(name, alamat, noHP, jenisKelamin, nim))){
-            return true;
-        } else {
-            return false;
-        }
-        
+    public void addMahasiswa(String name, String alamat, String noHP, String jenisKelamin, String nim) {
+        Mahasiswa m = new Mahasiswa(name, alamat, noHP, jenisKelamin, nim);
+        dafMhs.add(m);
+        db.saveMahasiswa(m);
     }
-
 
     public Asisten getAsisten(String id_asisten) {
-        Asisten a = null;
-        for (int i = 0; i < dafAsisten.size(); i++) {
-            if (dafAsisten.get(i).getId_asisten().equals(id_asisten)) {
-                a = dafAsisten.get(i);
-                break;
+        for (Asisten a : dafAsisten) {
+            if (a.getId_asisten() == id_asisten) {
+                return a;
             }
         }
+        Asisten a = db.getAsisten(id_asisten);
+        dafAsisten.add(a);
         return a;
     }
 
     public Mahasiswa getMahasiswa(String nim) {
-        Mahasiswa a = null;
-        for (int i = 0; i < dafMhs.size(); i++) {
-            if (dafMhs.get(i).getNIM().equals(nim)) {
-                a = dafMhs.get(i);
+        for (Mahasiswa m : dafMhs) {
+            if (m.getNIM() == nim) {
+                return m;
             }
         }
-        return a;
+        Mahasiswa m = db.getMahasiswa(nim);
+        dafMhs.add(m);
+        return m;
     }
 
- public boolean deleteAsisten(String id_asisten) {
-        if (dafAsisten.remove(getAsisten(id_asisten))) {
-            return true;
-        } else {
-            return false;
-        }
+    public void deleteAsisten(String id_asisten) {
+        dafAsisten.remove(getAsisten(id_asisten));
     }
 
-    public boolean deleteMahasiswa(String nim) {
-        if (dafMhs.remove(getMahasiswa(nim))) {
-            return true;
-        } else {
-            return false;
-        }
+    public void deleteMahasiswa(String nim) {
+        dafMhs.remove(getMahasiswa(nim));
     }
 
     public void menuAsisten() {
@@ -223,7 +209,7 @@ public class Aplikasi {
                         System.out.print("Alamat : ");
                         String alamat = s.next();
                         System.out.print("No HP : ");
-                        long no = s.nextLong();
+                        String no = s.next();
                         System.out.print("Jenis Kelamin : ");
                         String jk = s.next();
                         System.out.print("ID Asisten : ");
@@ -346,7 +332,7 @@ public class Aplikasi {
                         System.out.print("Alamat : ");
                         String alamat = s.next();
                         System.out.print("No HP : ");
-                        long no = s.nextLong();
+                        String no = s.next();
                         System.out.print("Jenis Kelamin : ");
                         String jk = s.next();
                         System.out.print("NIM : ");

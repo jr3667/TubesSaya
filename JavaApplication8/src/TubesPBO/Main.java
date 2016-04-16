@@ -14,6 +14,8 @@ public class Main {
     public static void main(String[] args) {
         Aplikasi a = new Aplikasi();
         a.mainMenu();
+        
+        
     }
     /**
      * @param args the command line arguments

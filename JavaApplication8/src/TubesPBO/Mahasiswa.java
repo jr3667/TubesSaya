@@ -29,7 +29,7 @@ public class Mahasiswa extends Orang {
         return tb;
     }
 
-    public Mahasiswa(String name, String alamat, long noHP, String jenisKelamin, String nim) {
+    public Mahasiswa(String name, String alamat, String noHP, String jenisKelamin, String nim) {
         super(name, alamat, noHP, jenisKelamin);
         this.nim = nim;
     }
@@ -46,7 +46,7 @@ public class Mahasiswa extends Orang {
         this.alamat = alamat;
     }
 
-    public void setNoHP(long noHP) {
+    public void setNoHP(String noHP) {
         this.noHP = noHP;
     }
 
@@ -63,7 +63,7 @@ public class Mahasiswa extends Orang {
         return alamat;
     }
 
-    public long getNoHP() {
+    public String getNoHP() {
         return noHP;
     }
 

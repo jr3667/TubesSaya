@@ -5,6 +5,12 @@
  */
 package View;
 
+import java.awt.Component;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Penguin
@@ -16,6 +22,8 @@ public class InputDataAsisten extends javax.swing.JFrame {
      */
     public InputDataAsisten() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Masukkan Data Asisten");
     }
 
     /**
@@ -120,38 +128,38 @@ public class InputDataAsisten extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InputDataAsisten().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(InputDataAsisten.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new InputDataAsisten().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnSimpanAsis;
@@ -167,4 +175,72 @@ public class InputDataAsisten extends javax.swing.JFrame {
     private javax.swing.JTextField namaAsisText;
     private javax.swing.JTextField nohpAsisText;
     // End of variables declaration//GEN-END:variables
+                   
+
+    public JButton getBtnSimpan() {
+        return BtnSimpanAsis;
+    }
+
+    public void setNama(String s) {
+        namaAsisText.setText(s);
+    }
+
+    public void setAlamat(String s) {
+        alamatAsisText.setText(s);
+    }
+    public void setJenisKelamin(String s) {
+        jkelaminAsisText.setText(s);
+    }
+    
+    public void setNoHp(String a) {
+        nohpAsisText.setText(a);
+    }
+    
+    public void setIdAssiten(String d) {
+        idAsisText.setText(d);
+    }
+    
+    public String getAlamat() {
+        return alamatAsisText.getText();
+    }
+    
+    public String getNama() {
+        return namaAsisText.getText();
+    }
+    
+    public String getJenisKelamin() {
+        return jkelaminAsisText.getText();
+    }
+
+    public String getIdAsisten() {
+        return idAsisText.getText();
+    }
+    
+    public String getNoHpAsisten() {
+        return nohpAsisText.getText();
+    }
+    
+    public JTextField getIdAsisText() {
+        return idAsisText;
+    }
+
+    public JTextField getNohpAsisText() {
+        return nohpAsisText;
+    }
+
+    public JTextField getAlamatAsisText() {
+        return alamatAsisText;
+    }
+
+    public JTextField getNamaAsisText() {
+        return namaAsisText;
+    } 
+
+    public void addListener(ActionListener e){
+        BtnSimpanAsis.addActionListener(e);
+    }
+
+    public void showMessage(Component  c, String s){
+        JOptionPane.showMessageDialog(c, s);
+    }
 }

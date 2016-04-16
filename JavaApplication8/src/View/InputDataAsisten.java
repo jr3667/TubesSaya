@@ -236,6 +236,10 @@ public class InputDataAsisten extends javax.swing.JFrame {
         return namaAsisText;
     } 
 
+    public JTextField getJkelaminAsisText() {
+        return jkelaminAsisText;
+    }
+
     public void addListener(ActionListener e){
         BtnSimpanAsis.addActionListener(e);
     }

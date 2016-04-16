@@ -26,6 +26,7 @@ public class ControllerInputDataAsisten implements ActionListener, FocusListener
     public ControllerInputDataAsisten(Aplikasi model) {
         this.model = model;
         view = new InputDataAsisten();
+        a = new Asisten();
         view.setVisible(true);
         view.addListener(this);
         this.a = null;
@@ -34,23 +35,49 @@ public class ControllerInputDataAsisten implements ActionListener, FocusListener
         this.view.getAlamatAsisText().addFocusListener(this);
         this.view.getNohpAsisText().addFocusListener(this);
         this.view.getIdAsisText().addFocusListener(this);
-                
-        
+        this.view.getJkelaminAsisText().addFocusListener(this);
+    }
+    
+    public ControllerInputDataAsisten(Aplikasi model, Asisten a) {
+        this.model = model;
+        view = new InputDataAsisten();
+        view.setVisible(true);
+        view.addListener(this);
+        this.a = a;
+        view.setName(a.getName());
+        view.setAlamat(a.getAlamat());
+        view.setIdAssiten(a.getId_asisten());
+        view.setJenisKelamin(a.getJenisKelamin());
+        view.setNoHp(a.getNoHP());
+        view.getBtnSimpan().setText("Simpan");
+        view.setTitle("Edit Asisten");
     }
     
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        Object source = ae.getSource();
+        if(source.equals(view.getBtnSimpan())) {
+            String nama = view.getNamaAsisText().getText();
+            String alamat = view.getAlamatAsisText().getText();
+            String jkelamin = view.getJkelaminAsisText().getText();
+            String nohp = view.getNohpAsisText().getText();
+            String id = view.getIdAsisText().getText();
+        } 
+}
 
     @Override
     public void focusGained(FocusEvent fe) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
     }
 
     @Override
     public void focusLost(FocusEvent fe) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Object o = fe.getSource();
+        if(o.equals(this.view.getNamaAsisText())) {
+            if(this.view.getNamaAsisText().getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Mohon Isi Seluruh Data");
+            }
+        }
     }
 }

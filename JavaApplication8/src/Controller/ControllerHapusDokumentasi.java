@@ -5,17 +5,24 @@
  */
 package Controller;
 
-import TubesPBO.Aplikasi;
+import Model.Aplikasi;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
  * @author acer
  */
-public class ControllerHapusDokumentasi {
+public class ControllerHapusDokumentasi implements ActionListener {
     private Aplikasi model;
 
     public ControllerHapusDokumentasi(Aplikasi model) {
         this.model = model;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
     }
     
 }

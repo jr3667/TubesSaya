@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package TubesPBO;
+package Model;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -84,6 +84,19 @@ public class Aplikasi {
         for (int i = 0; i < dafAsisten.size(); i++) {
             System.out.println((i + 1) + "." + dafAsisten.get(i).getName());
         }
+    }
+
+    public String menuShowAllAsistenTubes() {
+        String a = "";
+        for (int i = 0; i < dafAsisten.size(); i++) {
+            a += "" + dafAsisten.get(i).getId_asisten() + ". " + dafAsisten.get(i).getName();
+
+            for (int j = 0; j < dafAsisten.get(i).getnTubes(); j++) {
+                a += "" + dafAsisten.get(i).getTugasBesar(j).getJudul();
+                a += "-------------------------";
+            }
+        }
+        return a;
     }
 
     public void menuMahasiswa() {
@@ -296,6 +309,10 @@ public class Aplikasi {
                         }
                         break;
                     case 3:
+                        System.out.println("Daftar Data Asisten");
+                        for (int i = 0; i < dafAsisten.size(); i++) {
+                                        System.out.println((i + 1) + ". " + dafAsisten.get(i).getId_asisten()+" - "+dafAsisten.get(i).getName());
+                                    }
                         System.out.println("Masukkan Data Asisten yang Akan di Hapus");
                         System.out.print("ID Asisten : ");
                         id = s.next();
@@ -355,7 +372,7 @@ public class Aplikasi {
                                     System.out.print("Masukkan Pilihan : ");
                                     b = s.nextInt();
                                     for (int i = 0; i < dafAsisten.get(b - 1).getnTubes(); i++) {
-                                        System.out.println((i + 1) + ". " + dafAsisten.get(b - 1).getTugasBesar(i));
+                                        System.out.println((i + 1) + ". " + dafAsisten.get(b - 1).getTugasBesar(i).getJudul());
                                     }
                                     System.out.print("Masukkan Pilihan Tugas Besar : ");
                                     int bc = s.nextInt();
@@ -394,6 +411,7 @@ public class Aplikasi {
                                     System.out.print("Masukkan Pilihan Tugas Besar : ");
                                     bc = s.nextInt();
                                     TugasBesar e = new TugasBesar(dafAsisten.get(b - 1).getTugasBesar(bc - 1).getJudul());
+                                    
                                     System.out.print("Hapus dokumentasi ke- ");
                                     int cd = s.nextInt();
                                     getMahasiswa(nim).removeDokumentasi(dafAsisten.get(b - 1).getTugasBesar(bc), cd);

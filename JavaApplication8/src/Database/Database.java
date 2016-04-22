@@ -5,8 +5,8 @@
  */
 package Database;
 
-import TubesPBO.Asisten;
-import TubesPBO.Mahasiswa;
+import Model.Asisten;
+import Model.Mahasiswa;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

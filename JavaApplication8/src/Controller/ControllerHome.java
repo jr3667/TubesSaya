@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import TubesPBO.Aplikasi;
+import Model.Aplikasi;
 import View.Home;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

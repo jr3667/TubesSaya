@@ -5,10 +5,10 @@
  */
 package Controller;
 
-import TubesPBO.Aplikasi;
-import TubesPBO.Dokumentasi;
-import TubesPBO.TugasBesar;
-import View.MenuDokumentasi;
+import Model.Aplikasi;
+import Model.Dokumentasi;
+import Model.TugasBesar;
+import View.MenuDokumentasiAsisten;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,12 +19,12 @@ import java.awt.event.ActionListener;
 public class ControllerMenuDokumentasi implements ActionListener {
 
     Aplikasi model;
-    MenuDokumentasi view;
+    MenuDokumentasiAsisten view;
     Dokumentasi d;
 
-    public ControllerMenuDokumentasi(Aplikasi model, MenuDokumentasi view, Dokumentasi d) {
+    public ControllerMenuDokumentasi(Aplikasi model, MenuDokumentasiAsisten view, Dokumentasi d) {
         this.model = model;
-        view = new MenuDokumentasi();
+        view = new MenuDokumentasiAsisten();
         
         view.setVisible(true);
         view.getBtnaddDokumen().addActionListener(this);

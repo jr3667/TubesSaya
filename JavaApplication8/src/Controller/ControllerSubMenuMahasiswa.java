@@ -6,8 +6,8 @@
  */
 package Controller;
 
-import TubesPBO.Aplikasi;
-import View.SubMenuMahasiswa;
+import Model.Aplikasi;
+import View.MenuTugasBesarMhs;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,11 +17,11 @@ import java.awt.event.ActionListener;
  */
 class ControllerSubMenuMahasiswa implements ActionListener{
 
-    private SubMenuMahasiswa view;
+    private MenuTugasBesarMhs view;
     Aplikasi model;
     
     public ControllerSubMenuMahasiswa(Aplikasi model) {
-        view = new SubMenuMahasiswa();
+        view = new MenuTugasBesarMhs();
         view.setVisible(true);
         this.model = model;
         view.getBtnHalamanUtama().addActionListener(this);

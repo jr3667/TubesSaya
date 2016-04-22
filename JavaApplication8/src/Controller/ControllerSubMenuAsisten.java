@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import TubesPBO.Aplikasi;
+import Model.Aplikasi;
 
 /**
  *

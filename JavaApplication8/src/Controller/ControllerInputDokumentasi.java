@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Controller;
-import TubesPBO.Aplikasi;
+import Model.Aplikasi;
 /**
  *
  * @author acer

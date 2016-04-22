@@ -29,14 +29,32 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnCariAs = new javax.swing.JButton();
+        btnHapusAs = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        btnAdd = new javax.swing.JButton();
+        BtnMainMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BtnaddMhs = new javax.swing.JButton();
         BtnCariMhs = new javax.swing.JButton();
         BtnHapusMhs = new javax.swing.JButton();
-        BtnHalamanUtama = new javax.swing.JButton();
+        BtnMainMenu1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        btnCariAs.setText("Login Asisten");
+
+        btnHapusAs.setText("Hapus Asisten");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Menu Asisten");
+
+        btnAdd.setText("Tambah Asisten");
+
+        BtnMainMenu.setText("Kembali ke Menu Utama");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Menu Mahasiswa");
 
         BtnaddMhs.setText("Tambah Mahasiswa");
@@ -46,7 +64,14 @@ public class MenuMahasiswa extends javax.swing.JFrame {
 
         BtnHapusMhs.setText("Hapus Mahasiswa");
 
-        BtnHalamanUtama.setText("Ke menu halaman utama");
+        BtnMainMenu1.setText("Kembali ke Menu Utama");
+        BtnMainMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnMainMenu1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Menu Utama>Mahasiwa");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,53 +79,65 @@ public class MenuMahasiswa extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnMainMenu1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(BtnaddMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BtnHapusMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BtnCariMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(156, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BtnHalamanUtama)
-                .addGap(24, 24, 24))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BtnHapusMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(BtnaddMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BtnCariMhs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 138, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(4, 4, 4)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(BtnaddMhs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtnCariMhs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BtnHapusMhs)
-                .addGap(18, 18, 18)
-                .addComponent(BtnHalamanUtama)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(BtnaddMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(BtnCariMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnHapusMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(BtnMainMenu1)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BtnMainMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMainMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnMainMenu1ActionPerformed
+
        
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCariMhs;
-    private javax.swing.JButton BtnHalamanUtama;
     private javax.swing.JButton BtnHapusMhs;
+    private javax.swing.JButton BtnMainMenu;
+    private javax.swing.JButton BtnMainMenu1;
     private javax.swing.JButton BtnaddMhs;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnCariAs;
+    private javax.swing.JButton btnHapusAs;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
-        public JButton getBtnHalamanUtama() {
-           return BtnHalamanUtama;
-       }
-       
+
        public JButton getaddMhs() {
            return BtnaddMhs;
        }
@@ -116,6 +153,12 @@ public class MenuMahasiswa extends javax.swing.JFrame {
     public JButton getBtnaddMhs() {
         return BtnaddMhs;
     }
+
+    public JButton getBtnMainMenu1() {
+        return BtnMainMenu1;
+    }
+    
+    
        
        
     

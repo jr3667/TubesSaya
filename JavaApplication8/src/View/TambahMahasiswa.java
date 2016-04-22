@@ -9,18 +9,19 @@ import Controller.ControllerInputDataMahasiswa;
 import java.awt.Component;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 /**
  *
  * @author Penguin
  */
-public class MasukanDataMahasiswa extends javax.swing.JFrame {
+public class TambahMahasiswa extends javax.swing.JFrame {
 
     /**
      * Creates new form MasukanDataMahasiswa
      */
-    public MasukanDataMahasiswa() {
+    public TambahMahasiswa() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("Masukkan Data Asisten");
@@ -36,9 +37,7 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
     private void initComponents() {
 
         namaMhsText = new javax.swing.JTextField();
-        alamatMhsText = new javax.swing.JTextField();
         nohpMhsText = new javax.swing.JTextField();
-        jkelaminMhsText = new javax.swing.JTextField();
         nimMhsText = new javax.swing.JTextField();
         BtnSimpanMhs = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -47,8 +46,19 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        alamatMhsText = new javax.swing.JTextField();
+        RadioBtnCowo = new javax.swing.JRadioButton();
+        RadioBtnCewe = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
+        BtnMainMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        namaMhsText.setText("Nama Mahasiswa");
+
+        nohpMhsText.setText("Nomor Handphone Mahasiswa");
+
+        nimMhsText.setText("NIM Mahasiswa");
 
         BtnSimpanMhs.setText("Simpan");
 
@@ -56,13 +66,29 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
 
         jLabel5.setText("Jenis Kelamin");
 
-        jLabel4.setText("No Hp");
+        jLabel4.setText("Nomor Handphone");
 
         jLabel3.setText("Alamat");
 
         jLabel2.setText("Nama");
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Masukan Data Mahasiswa");
+
+        alamatMhsText.setText("Alamat Mahasiswa");
+
+        RadioBtnCowo.setText("Laki-Laki");
+        RadioBtnCowo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RadioBtnCowoActionPerformed(evt);
+            }
+        });
+
+        RadioBtnCewe.setText("Perempuan");
+
+        jLabel7.setText("Menu Utama>Mahasiwa>Tambah Mahasiswa");
+
+        BtnMainMenu.setText("Kembali ke Menu Utama");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,33 +97,47 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel1))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnSimpanMhs)
+                        .addGap(42, 42, 42)
+                        .addComponent(BtnMainMenu))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(48, 48, 48)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnSimpanMhs)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(namaMhsText, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                                .addComponent(alamatMhsText)
-                                .addComponent(nohpMhsText)
-                                .addComponent(jkelaminMhsText)
-                                .addComponent(nimMhsText)))))
-                .addContainerGap(128, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel7))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(47, 47, 47)
+                                        .addComponent(jLabel1))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel2)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel5)
+                                            .addComponent(jLabel6))
+                                        .addGap(48, 48, 48)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(nimMhsText)
+                                            .addComponent(namaMhsText)
+                                            .addComponent(alamatMhsText)
+                                            .addComponent(RadioBtnCewe)
+                                            .addComponent(RadioBtnCowo)
+                                            .addComponent(nohpMhsText, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGap(0, 29, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(7, 7, 7)
                 .addComponent(jLabel1)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(namaMhsText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -109,21 +149,29 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(nohpMhsText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RadioBtnCowo)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RadioBtnCewe)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jkelaminMhsText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(nimMhsText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(nimMhsText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(BtnSimpanMhs)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BtnSimpanMhs)
+                    .addComponent(BtnMainMenu))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RadioBtnCowoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RadioBtnCowoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RadioBtnCowoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,26 +190,29 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(MasukanDataMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(TambahMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(MasukanDataMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(TambahMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(MasukanDataMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(TambahMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(MasukanDataMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(TambahMahasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
 //
 //        /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new MasukanDataMahasiswa().setVisible(true);
+//                new TambahMahasiswa().setVisible(true);
 //            }
 //        });
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnMainMenu;
     private javax.swing.JButton BtnSimpanMhs;
+    private javax.swing.JRadioButton RadioBtnCewe;
+    private javax.swing.JRadioButton RadioBtnCowo;
     private javax.swing.JTextField alamatMhsText;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -169,7 +220,7 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jkelaminMhsText;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField namaMhsText;
     private javax.swing.JTextField nimMhsText;
     private javax.swing.JTextField nohpMhsText;
@@ -178,26 +229,6 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
     public JButton getBtnSimpan() {
         return BtnSimpanMhs;
     }
-
-    public void setNama(String s) {
-        namaMhsText.setText(s);
-    }
-
-    public void setAlamat(String s) {
-        alamatMhsText.setText(s);
-    }
-
-    public void setJenisKelamin(String s) {
-        jkelaminMhsText.setText(s);
-    }
-    
-    public void setNimMhs(String n) {
-        nimMhsText.setText(n);
-    }
-
-    public void setNohpMhs(String n) {
-        nohpMhsText.setText(n);
-    }
     
     public String getNama() {
         return namaMhsText.getText();
@@ -205,9 +236,7 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
     public String getAlamat() {
         return alamatMhsText.getText();
     }
-    public String getJenisKelamin() {
-        return jkelaminMhsText.getText();
-    }
+  
     public String getNoHp() {
         return nohpMhsText.getText();
     }
@@ -217,10 +246,6 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
 
     public JTextField getAlamatMhsText() {
         return alamatMhsText;
-    }
-
-    public JTextField getJkelaminMhsText() {
-        return jkelaminMhsText;
     }
 
     public JTextField getNamaMhsText() {
@@ -233,6 +258,18 @@ public class MasukanDataMahasiswa extends javax.swing.JFrame {
 
     public JTextField getNohpMhsText() {
         return nohpMhsText;
+    }
+
+    public JButton getBtnSimpanMhs() {
+        return BtnSimpanMhs;
+    }
+
+    public JRadioButton getRadioBtnCewe() {
+        return RadioBtnCewe;
+    }
+
+    public JRadioButton getRadioBtnCowo() {
+        return RadioBtnCowo;
     }
     
     public void showMessage(Component  c, String s){
